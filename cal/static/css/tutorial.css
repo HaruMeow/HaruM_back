@@ -1,0 +1,131 @@
+.header-font{
+    font-family: 'NanumSquareAceb', sans-serif;
+}
+.content-font{
+    font-family: 'NanumSquareAcb', sans-serif;
+}
+
+
+.display-container {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    max-width: 415px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    z-index: 0;
+    background-color: #E8F0FF;
+    overflow-x: hidden;
+}
+
+/*여기 이후부터 쓰시면 돼요!*/
+/*tutorial1*/
+.main-photo{
+    margin-top:150px;
+    background-color: #A5BAFF;
+    border-radius: 159px;
+    width:300px;
+    margin-left: 55px;
+}
+.main-photo img{
+    width: 300px;
+    padding:50px 50px;
+}
+.main-title{
+    margin-top: 50px;
+}
+.title-1{
+    font-size: 45px;
+    margin-bottom: -1px;
+    margin-left: -110px;
+    color:#5178FF;
+}
+.title-2{
+    font-size: 35px;
+}
+.button{
+    margin-top: 150px;
+}
+.button input{
+    width:300px;
+    height: 60px;
+    border-radius: 25px;
+    border:none;
+    font-size: 23px;
+    background-color: #A5BAFF;
+    color:white;
+    box-shadow: 4px 4px 4px 1px #7a83a1a1;
+}
+
+/*tutorial2*/
+.main1{
+    margin-top:150px;
+}
+.title1{
+    font-size: 40px;
+}
+.title1 span{
+    color:#5178FF;
+}
+.title2{
+    font-size: 30px;
+    background-color:#A5BAFF;
+    width:160px;
+    margin-left:120px;
+    color:white;
+}
+.title3, .title4{
+    font-size: 30px;
+    margin-top:-10px;
+}
+.title4{
+    margin-top: -15px;
+}
+
+.title5, .title6, .title7, .title8{
+    font-size: 25px;
+    margin-top:-10px;
+}
+.title8{
+    margin-bottom: 100px ;
+}
+
+/*tutorial3*/
+.main3{
+    margin-top:110px;
+}
+.main3-title{
+    font-size: 30px;
+}
+.main3-title span{
+    color:#5178FF;
+}
+.main3-content{
+    background-color: white;
+    width:300px;
+    height: 200px;
+    margin-left: 55px;
+    padding-top:55px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+.kitty-img img{
+    background-color: #A5BAFF;
+    border-radius: 159px;
+    width:250px;
+    margin-left: 80px;
+    margin-top:30px;
+    padding:10px
+}
+.button1{
+    margin-top: 50px;
+}
+.button1 input{
+    width:300px;
+    height: 70px;
+    border-radius: 25px;
+    border:none;
+    font-size: 23px;
+    background-color: white;
+    color:#5178FF;
+    box-shadow: 4px 4px 4px 1px #7a83a1a1;
+}

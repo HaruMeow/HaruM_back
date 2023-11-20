@@ -1,0 +1,128 @@
+.header-font{
+    font-family: 'NanumSquareExtraBold', sans-serif;
+}
+.content-font{
+    font-family: 'NanumSquareBold', sans-serif;
+}
+
+.display-container {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    max-width: 415px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    z-index: 0;
+    background-color: #E8F0FF;
+    overflow-x: hidden;
+}
+
+/*여기 이후부터 쓰시면 돼요!*/
+
+/*title*/
+.cal-title{
+    width: 370px;
+    height: 90px;
+    margin-left:auto;
+    margin-right: auto;
+    background-color: #88A2FF;
+    margin-top:20px;
+    border-radius: 20px;
+    color:white;
+    box-shadow: 4px 4px 4px 1px #7a83a1a1;
+}
+.cal-title p{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/*content*/
+.target-box{
+    width:350px;
+    height: 520px;
+    margin-left:auto;
+    margin-right: auto;
+    background-color: #DCE4FF;
+    margin-top:20px;
+    padding:30px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px 1px #7a83a1a1;
+    font-size: 20px;
+}
+.target-2{
+    margin-bottom: 20px;
+}
+.target-2-text{
+    background-color: white;
+    width: 285px;
+    height: 100px;
+    overflow-x: hidden;
+    border-radius: 20px;
+    border:none;
+    box-shadow: 3px 3px 3px 1px #7a83a1a1 inset;
+    font-size: 18px;
+    padding:20px;
+    color:#33437A;
+}
+.img-box{
+    background-color: white;
+    padding:20px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px 1px #7a83a1a1 inset;
+}
+.img-box img{
+    width:200px;
+    height: 200px;
+}
+.next-btn{
+    margin-top: 50px;
+}
+.next-btn button{
+    background-color: #88A2FF;
+    border: none;
+    width:250px;
+    height:50px;
+    border-radius: 20px;
+    color:white;
+}
+/*main bar*/
+.main-bar{
+    position:fixed;
+    height: 100px;
+    width: 415px;
+    background-color: #88A2FF;
+    box-shadow: 0px -4px 8px #8997c7a1;
+    bottom:0;
+}
+.cal{
+    z-index: 0;
+    margin-bottom: 25px;
+    padding-top:17px;
+}
+.cal button{
+    width:70px;
+    height: 70px;
+    border:none;
+    border-radius: 20px;
+    background-color: #DCE4FF;
+    color: #515c84;
+}
+.stat-btn{
+    margin-left: 200px;
+}
+.plus{
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 25px;
+    margin-left: 155px;
+    position:fixed;
+    bottom:0;
+}
+.plus-btn{
+    width: 100px;
+    height: 100px;
+    border:none;
+    border-radius: 60px;
+    box-shadow: 3px 3px 3px 2px #444b65a1;
+    color:#515c84;
+    background-color: white;
+}
