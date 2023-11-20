@@ -1,0 +1,70 @@
+.header-font{
+    font-family: 'NanumSquareExtraBold', sans-serif;
+}
+.content-font{
+    font-family: 'NanumSquareBold', sans-serif;
+}
+
+.display-container {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    max-width: 415px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    z-index: 0;
+    background-color: #E8F0FF;
+    overflow-x: hidden;
+}
+
+/*여기 이후부터 쓰시면 돼요!*/
+.join-title{
+    font-size: 35px;
+    background-color: #88A2FF;
+    width: 150px;
+    margin-top: 75px;
+    margin-left: 30px;
+    color:white;
+}
+.join-sub{
+    font-size: 18px;
+    margin-left:30px;
+    margin-top:-10px;
+    color:#5B6997;
+    margin-bottom: 30px;
+}
+.bi{
+    width:35px;
+    margin-top:20px;
+    margin-left: 15px;
+}
+.back{
+    border:none;
+    background-color: #e8f0ff00;
+}
+.join-content input{
+    margin: 15px;
+    width:350px;
+    height: 70px;
+    border:none;
+    border-radius: 25px;
+    padding:20px;
+    font-size: 18px;
+
+}
+.button-next{
+    margin-top: 70px;
+}
+.button-next input{
+    width:300px;
+    height: 60px;
+    border-radius: 25px;
+    border:none;
+    font-size: 23px;
+    background-color: #88A2FF;
+    color:white;
+    box-shadow: 4px 4px 4px 1px #7a83a1a1;
+}
+.more{
+    margin-top: 15px;
+    color:#5B6997;
+}
