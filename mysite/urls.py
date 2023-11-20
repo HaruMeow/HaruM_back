@@ -1,4 +1,4 @@
-# 회원가입 - 9줄
+# 회원가입 - 9
 from django import views
 from django.contrib import admin
 from django.urls import include, path
