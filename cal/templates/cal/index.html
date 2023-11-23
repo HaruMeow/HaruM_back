@@ -17,9 +17,12 @@
             <p class="head-1">100일동안</p>
             <p class="head-2">무엇을 실천해볼까요?</p>
             <!--<form action="회원가입처리페이지.html" method="post">-->
+            <form action="/login/" method="post">
+                    {% csrf_token %}
             <input type="text" placeholder="아이디" class="id">
             <input type="password" id="password" class="pass" placeholder="비밀번호"><br><br>
             <a href="{% url 'tutorial1' %}"><input type="submit" value="로그인"><br></a>
+            </from>
             <p><a href="{% url 'join' %}">회원가입</a></p>
         <!--</form>-->
         </div>
