@@ -24,3 +24,6 @@ class CalendarView(View):
 class Target2View(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'cal/target2.html', {})
+
+def target2(request):
+    return render(request, 'cal/target.html')
