@@ -1,16 +1,19 @@
 <!DOCTYPE html>
+{% load static %} 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하루냥</title>
-    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+    <link rel="stylesheet" href="{% static 'cal/css/add.css' %}">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
     <div class="display-container">
      <!--title-->
+     <form method="get">
+        {% csrf_token %}
         <div class="cal-title d-flex justify-content-center">
             <select class="custom-select header-font" id="target_dropdown" name="target">
               <option value="목표 선택" disabled selected>목표 선택</option>
@@ -18,7 +21,10 @@
               <option value="다른 목표">다른 목표</option>
             </select>
         </div>
+    </form>
     <!--content-->
+    <form method="post">
+        {% csrf_token %}
         <div class="target-box header-font">
             <div class="target-1">
                 <input type="text" placeholder="제목" class="target-1-text">
@@ -38,6 +44,7 @@
                 </button>
             </div>
         </div>
+    </form>
     <!--main bar-->
     <div class="plus">
             <button class="plus-btn" onClick="location.href='{% url 'target' %}'">
