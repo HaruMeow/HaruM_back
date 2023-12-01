@@ -25,18 +25,18 @@
       <ul class="button-list" id="button-list"></ul>
     </div>
     <!-- stamp content -->
-    <form method="get" action="{% url 'add' %}">
-      {% csrf_token %}
     <div class="stamp-content text-center header-font">
       <div class="stamp-content-svg">
+        <form method="get" action="{% url 'add' %}">
+          {% csrf_token %}
           <button type="submit">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#33437A" class="bi bi-plus" viewBox="0 0 16 16">
               <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
             </svg>
           </button>
-      </div>
+        </form>
+        </div>
     </div>
-  </form>
     <!-- main bar -->
     <div class="plus">
         <button type="submit" class="plus-btn" id="target">
@@ -70,6 +70,20 @@
     });
     document.getElementById("stat").addEventListener("click", function() {
         window.location.href = "{% url 'state' %}";
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttonCount = 100;
+  
+      const buttonList = document.getElementById("button-list");
+      for (let i = 1; i <= buttonCount; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        buttonList.appendChild(button);
+      }
+      const firstButton = document.querySelector("#button-list button:first-child");
+        firstButton.addEventListener("click", function () {
+          window.location.href = "{% url 'memo' %}";
+    });
     });
 </script>
 </body>
