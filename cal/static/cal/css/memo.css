@@ -38,7 +38,7 @@
 /*content*/
 .target-box{
     width:350px;
-    height: 520px;
+    height: 430px;
     margin-left:auto;
     margin-right: auto;
     background-color: #DCE4FF;
@@ -74,7 +74,7 @@
     height: 200px;
 }
 .next-btn{
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .next-btn button{
     background-color: #88A2FF;
@@ -83,6 +83,7 @@
     height:50px;
     border-radius: 20px;
     color:white;
+    box-shadow: 4px 4px 4px 1px #7a83a1a1;
 }
 /*main bar*/
 .main-bar{

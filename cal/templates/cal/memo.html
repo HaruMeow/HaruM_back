@@ -11,50 +11,64 @@
 </head>
 <body>
     <div class="display-container">
+    {% for item in data %}
     <form method="get">
         {% csrf_token %}
      <!--title-->
         <div class="cal-title d-flex justify-content-center">
-            <p class="cal-title-p header-font">끄아아악</p>
+            <p class="cal-title-p header-font">{{ item.title }}</p>
         </div>
     <!--content-->
         <div class="target-box header-font">
             <div class="target-2">
                 <div class="target-2-text">
-                    저장된메모
+                    {{ item.description }}
                 </div>
             </div>
             <div class="img-box d-flex justify-content-center">
-                <img src="{% static 'cal/source/img/hobbycat.png' %}" alt="취미">
+                <img src="{{item.image.url}}" alt="이미지">
             </div>       
-               <div class="next-btn d-flex justify-content-center">
-                <button onClick="location.href='{% url 'calendar' %}'">
-                    확인
-                </button>
-            </div>
         </div>
     </form>
+    <div class="next-btn d-flex justify-content-center header-font">
+        <button type="submit" id="calendar-btn">
+            확인
+        </button>
+    </div>
+    {% endfor %}
     <!--main bar-->
     <div class="plus">
-            <button class="plus-btn" onClick="location.href='{% url 'target' %}'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                </svg>
-            </button>
-        </div>
-        <div class="main-bar text-center">
-                <div class="cal">
-                    <button class="cal-btn" onClick="location.href='{% url 'calendar' %}'">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
-                        <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                    </svg>
-                    <button class="stat-btn" onClick="location.href='{% url 'state' %}'">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
-                            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
-                        </svg>
-                    </button>
-                </div>
-        </div>
+        <button type="submit" class="plus-btn" id="target">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg>
+        </button>
     </div>
+    <div class="main-bar text-center">
+      <div class="cal">
+          <button type="submit" class="cal-btn" id="cal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+              <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            </svg>
+          </button>
+          <button type="submit" class="stat-btn" id="stat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+              <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+          </svg>
+          </button>
+      </div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("calendar-btn").addEventListener("click", function() {
+            window.location.href = "{% url 'calendar' %}";
+        });
+        document.getElementById("cal").addEventListener("click", function() {
+            window.location.href = "{% url 'calendar' %}";
+        });
+        document.getElementById("stat").addEventListener("click", function() {
+            window.location.href = "{% url 'state' %}";
+        });
+    </script>
 </body>

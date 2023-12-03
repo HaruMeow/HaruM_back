@@ -18,14 +18,16 @@
                 세워볼까요?</p>
             </div>
         </div>
+        <form method="post">
+            {% csrf_token %}
             <div class="target-box header-font">
                 <div class="target-1">
                     <p>1. 목표를 어떻게 부를까요?</p>
-                    <input type="text" placeholder="목표 이름" class="target-1-text">
+                    <input type="text" name="target" placeholder="목표 이름" class="target-1-text">
                 </div>
                 <div class="target-2">
                     <p>2. 구체적인 설명</p>
-                    <input type="text" placeholder="설명" class="target-2-text"></textarea>
+                    <input type="text" name="subtitle" placeholder="설명" class="target-2-text"></textarea>
                 </div>             
                    <div class="next-btn d-flex justify-content-center">
                     <button onClick="location.href='{% url 'calendar' %}'">
@@ -33,7 +35,7 @@
                     </button>
                 </div>
             </div>
-            
+        </form>
         </div>
     </div>
 </body>
