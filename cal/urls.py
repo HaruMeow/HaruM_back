@@ -2,6 +2,8 @@ from django.urls import path
 from .views import AddView, MemoView, TargetView, CalendarView, StateView
 from .views import Target2View
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('calendar/', CalendarView.as_view(), name='calendar'),
@@ -12,3 +14,8 @@ urlpatterns = [
     path('target2/', Target2View.as_view(), name='target2'),
     path('target2/', views.target2, name='target2'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+    

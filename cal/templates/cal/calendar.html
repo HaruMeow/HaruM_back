@@ -14,11 +14,15 @@
   <!-- title -->
   <div class="display-container">
     <div class="cal-title d-flex justify-content-center">
+      {% for item in data %}
+      <form method="get">
+        {% csrf_token %}
       <select class="custom-select header-font" id="target_dropdown" name="target">
-        <option value="목표 선택" disabled selected>목표 선택</option>
-        <option value="프론트 공부">프론트 공부</option>
-        <option value="다른 목표">다른 목표</option>
+        <option value="목표 선택" disabled selected>목표 선택</option>    
+          <option value="목표1">{{item.target}}</option>
       </select>
+    </form>
+    {% endfor %}
     </div>
     <!-- stamp pan -->
     <div class="stamp-pan text-center header-font">
