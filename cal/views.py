@@ -25,6 +25,26 @@ class MemoView(View):
     def get(self, request, *args, **kwargs):
         data=CalendarEvent.objects.all()
         return render(request, 'cal/memo.html',{'data' : data})
+    
+class Memo2View(View):
+    def get(self, request, *args, **kwargs):
+        data=CalendarEvent.objects.all()
+        return render(request, 'cal/memo2.html',{'data' : data})
+    
+class Memo3View(View):
+    def get(self, request, *args, **kwargs):
+        data=CalendarEvent.objects.all()
+        return render(request, 'cal/memo3.html',{'data' : data})
+
+class Memo4View(View):
+    def get(self, request, *args, **kwargs):
+        data=CalendarEvent.objects.all()
+        return render(request, 'cal/memo4.html',{'data' : data})
+
+class Memo5View(View):
+    def get(self, request, *args, **kwargs):
+        data=CalendarEvent.objects.all()
+        return render(request, 'cal/memo5.html',{'data' : data})
 
 class TargetView(View):
     def get(self, request, *args, **kwargs):
