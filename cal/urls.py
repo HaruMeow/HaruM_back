@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AddView, MemoView, TargetView, CalendarView, StateView
+from .views import AddView, MemoView,Memo2View, Memo3View,Memo4View,Memo5View, TargetView, CalendarView, StateView
 from .views import Target2View
 from . import views
 from django.conf import settings
@@ -9,6 +9,10 @@ urlpatterns = [
     path('calendar/', CalendarView.as_view(), name='calendar'),
     path('add/', AddView.as_view(), name='add'),
     path('memo/', MemoView.as_view(), name='memo'),
+    path('memo2/', Memo2View.as_view(), name='memo2'),
+    path('memo3/', Memo3View.as_view(), name='memo3'),
+    path('memo4/', Memo4View.as_view(), name='memo4'),
+    path('memo5/', Memo5View.as_view(), name='memo5'),
     path('target/', TargetView.as_view(), name='target'),
     path('state/', StateView.as_view(), name='state'),
     path('target2/', Target2View.as_view(), name='target2'),
