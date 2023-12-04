@@ -38,21 +38,21 @@ def user_logout(request):
     logout(request)
     return redirect('index')
 
-@require_POST
+#@require_POST
 def join_view(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            username = form.cleaned_data['id']
-            password = form.cleaned_data['password']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
             nickname = form.cleaned_data['nickname']
             login(request, user)
-            # POST 요청이 완료되면 GET 요청으로 index로 이동
             return redirect('index')
-
-    # GET 요청에 대한 처리
-    form = UserRegistrationForm()
+        else:
+            print(form.errors)  # 오류 출력
+    else:
+        form = UserRegistrationForm(initial={'username': 'default_username', 'password1': 'default_password', 'password2': 'default_password'})
     return render(request, 'account/join.html', {'form': form})
 
 def join_form(request):
@@ -70,3 +70,7 @@ def join_form(request):
             return redirect('index')
         else:
             return render(request, 'account/join.html', {'form': form})
+        
+def index(request):
+    return render(request, 'account/index.html')
+
