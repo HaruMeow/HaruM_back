@@ -75,3 +75,12 @@ class Target2View(View):
 
 def target2(request):
     return render(request, 'cal/target.html')
+
+
+
+from django.views import View
+from django.shortcuts import render
+
+class Tutorial1View(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'cal/tutorial1.html')

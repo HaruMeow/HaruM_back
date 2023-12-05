@@ -1,5 +1,3 @@
-# account/urls.py
-
 from django.urls import path
 from .views import join_form, register, user_login, user_logout, join_view, index
 
@@ -9,5 +7,6 @@ urlpatterns = [
     path('logout/', user_logout, name='logout'),
     path('join/', join_view, name='join'),
     path('join-form/', join_form, name='join-form'),
-    path('index/', index, name='index'),  # 'index' 뷰에 대한 패턴 추가
+    path('index/', index, name='index'),
 ]
+

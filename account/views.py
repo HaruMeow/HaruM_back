@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from account.models import UserProfile
+from .models import UserProfile
 from .forms import UserRegistrationForm, UserLoginForm
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
-
 
 def register(request):
     if request.method == 'POST':
@@ -31,14 +30,13 @@ def user_login(request):
                 return redirect('index')
     else:
         form = UserLoginForm()
-    return render(request, 'account/join.html', {'form': form})
+    return render(request, 'account/login.html', {'form': form})
 
 @login_required
 def user_logout(request):
     logout(request)
     return redirect('index')
 
-#@require_POST
 def join_view(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
@@ -48,11 +46,9 @@ def join_view(request):
             password = form.cleaned_data['password1']
             nickname = form.cleaned_data['nickname']
             login(request, user)
-            return redirect('index')
-        else:
-            print(form.errors)  # 오류 출력
+            return redirect('cal:tutorial1')
     else:
-        form = UserRegistrationForm(initial={'username': 'default_username', 'password1': 'default_password', 'password2': 'default_password'})
+        form = UserRegistrationForm()
     return render(request, 'account/join.html', {'form': form})
 
 def join_form(request):
@@ -63,14 +59,12 @@ def join_form(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            username = form.cleaned_data['id']
-            password = form.cleaned_data['password']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
             nickname = form.cleaned_data['nickname']
             login(request, user)
             return redirect('index')
-        else:
-            return render(request, 'account/join.html', {'form': form})
-        
+    return render(request, 'account/join.html', {'form': form})
+
 def index(request):
     return render(request, 'account/index.html')
-
