@@ -76,6 +76,9 @@ class Target2View(View):
 def target2(request):
     return render(request, 'cal/target.html')
 
+class indexView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'cal/index.html', {})
 
 
 from django.views import View

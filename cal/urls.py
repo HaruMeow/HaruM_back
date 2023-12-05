@@ -1,10 +1,11 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import AddView, Tutorial1View, Tutorial3View, Tutorial2View, MemoView, Memo2View, Memo3View, Memo4View, Memo5View, TargetView, CalendarView, StateView, Target2View, target2  # 수정한 부분
+from .views import AddView, Tutorial1View, Tutorial3View, Tutorial2View, MemoView, Memo2View, Memo3View, Memo4View, Memo5View, TargetView, CalendarView, StateView, Target2View, indexView, target2  # 수정한 부분
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('index/', indexView.as_view(), name='index'),
     path('calendar/', CalendarView.as_view(), name='calendar'),
     path('add/', AddView.as_view(), name='add'),
     path('memo/', MemoView.as_view(), name='memo'),
