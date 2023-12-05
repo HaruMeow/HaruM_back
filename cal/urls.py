@@ -1,6 +1,6 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import AddView, MemoView, Memo2View, Memo3View, Memo4View, Memo5View, TargetView, CalendarView, StateView, Target2View, target2  # 수정한 부분
+from .views import AddView, Tutorial1View, Tutorial3View, Tutorial2View, MemoView, Memo2View, Memo3View, Memo4View, Memo5View, TargetView, CalendarView, StateView, Target2View, target2  # 수정한 부분
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -17,6 +17,9 @@ urlpatterns = [
     path('target2/', Target2View.as_view(), name='target2'),
     path('target2/', target2, name='target2'),  # 수정한 부분
     path('tutorial1/', TemplateView.as_view(template_name='cal/tutorial1.html'), name='tutorial1'),  # tutorial1 추가
+    path('tutorial1/', Tutorial1View.as_view(), name='tutorial1'),
+    path('tutorial2/', Tutorial2View.as_view(), name='tutorial2'),
+    path('tutorial3/', Tutorial3View.as_view(), name='tutorial3'),
 ]
 
 if settings.DEBUG:

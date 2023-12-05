@@ -84,3 +84,13 @@ from django.shortcuts import render
 class Tutorial1View(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'cal/tutorial1.html')
+    
+class Tutorial2View(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'cal/tutorial2.html')
+    
+class Tutorial3View(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'cal/tutorial3.html')
+    
+
